@@ -14,6 +14,7 @@ import { BookFormComponent } from './book-list/book-form/book-form.component';
 import { HeaderComponent } from './header/header.component';
 import { Route } from '@angular/compiler/src/core';
 import { AuthGuardService } from './services/auth-guard.service';
+import { AuthService } from './services/auth.service';
 
 const appRoutes: Routes = [
   { path: 'auth/signup', component: SignupComponent },
@@ -42,7 +43,9 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
