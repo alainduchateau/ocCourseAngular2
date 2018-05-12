@@ -15,6 +15,7 @@ import { HeaderComponent } from './header/header.component';
 import { Route } from '@angular/compiler/src/core';
 import { AuthGuardService } from './services/auth-guard.service';
 import { AuthService } from './services/auth.service';
+import { BooksService} from './services/books.service';
 
 const appRoutes: Routes = [
   { path: 'auth/signup', component: SignupComponent },
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
   ],
   providers: [
     AuthService,
-    AuthGuardService
+    AuthGuardService,
+    BooksService,
   ],
   bootstrap: [AppComponent]
 })
